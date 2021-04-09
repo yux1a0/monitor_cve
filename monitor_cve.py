@@ -72,10 +72,10 @@ def get_news():
                 conn.commit()
                 cu.close()
                 conn.close()
+            time.sleep(300)
         except Exception as e:
             logging.error(e)
         cnt = total
-        time.sleep(300)
 
 if __name__ == "__main__":
     get_news()
