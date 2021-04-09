@@ -1,0 +1,3 @@
+监控Github中CVE相关的仓库的情况并推送到telegram
+
+相关telegram bot申请及使用自行搜索
