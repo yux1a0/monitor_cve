@@ -21,6 +21,7 @@ def get_news():
     cnt = 0
     year = datetime.datetime.now().year
     while True:
+        time.sleep(300)
         try:
             api_url = f"https://api.github.com/search/repositories?q=CVE-{year}&sort=updated"
             r = requests.get(api_url)
@@ -72,7 +73,6 @@ def get_news():
                 conn.commit()
                 cu.close()
                 conn.close()
-            time.sleep(300)
         except Exception as e:
             logging.error(e)
         cnt = total
